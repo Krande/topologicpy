@@ -2524,7 +2524,7 @@ class Topology():
                         # Convert geometry to Topologic format
                         #shape_topology = ifc_to_topologic_geometry(verts, edges, faces)
                         #shape_topology = Topology.SelfMerge(Topology.ByGeometry(verts, edges, faces))
-                        shape_topology = Topology.ByGeometry(verts, edges, faces, silent=True)
+                        shape_topology = Topology.ByGeometry(verts, edges, faces, silent=True, topologyType="CellComplex")
                         if removeCoplanarFaces == True:
                             shape_topology = Topology.RemoveCoplanarFaces(shape_topology, epsilon=0.0001)
 
